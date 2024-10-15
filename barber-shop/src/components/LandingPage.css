@@ -66,3 +66,13 @@ body {
     text-transform: uppercase;
     color: #ccc;
 }
+
+/* Banner */
+
+.banner {
+    background-image: url('/barber-shop/src/assets/image/Untitled229.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}

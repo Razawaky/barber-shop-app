@@ -1,47 +1,11 @@
 import './LandingPage.css';
+import Banner from "../assets/image/Untitled229.png";
 
 function LandingPage() {
     return (
     <>
-        {/* Header */}
-        <div className="bg-black">
-            <div className="container mx-auto px-4 py-5 flex items-center justify-between w-screen">
-                <div className="text-xl">
-                    LOGO
-                </div>
-
-                <ul className="flex items-center space-x-10">
-                    <li>
-                        <a href="" className="text-sm text-white hover:text-gray-400 hover:underline">HOME</a>
-                    </li>
-
-                    <li>
-                        <a href="" className="text-sm text-white hover:text-gray-400 hover:underline">SERVIÇOS</a>
-                    </li>
-
-                    <li>
-                        <a href="" className="text-sm text-white hover:text-gray-400 hover:underline">TIME</a>
-                    </li>
-                        
-                    <li>
-                        <a href="" className="text-sm text-white hover:text-gray-400 hover:underline">SOBRE</a>
-                    </li>
-
-                    <li>
-                        <a href="" className="text-sm text-white hover:text-gray-400 hover:underline">PORTIFÓLIO</a>
-                    </li>
-                </ul>
-
-                <a href="" className="inline-flex font-medium px-5 py-1.5 rounded border border-inherit">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth= "1.5" stroke="currentColor" className="size-6 mr-2 text-white">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>
-                    PLANOS
-                </a>
-            </div>
-        </div>
-        {/* Header */}
-        <nav className="bg-black fixed w-full z-20 top-0 start-0 px-2 py-2">
+        {/* NavBar */}
+        <nav className="navbar bg-black fixed navbar-expand-lg w-full z-20 top-0 start-0 px-2 py-2">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse text-white">
                     <div className="text-xl">
@@ -49,54 +13,34 @@ function LandingPage() {
                     </div>
                 </a>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
-                    <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>
+                    <button type="button" className="inline-flex font-medium px-5 py-1 rounded border border-inherit">
+                        CONHECER
+                    </button>      
                 </div>
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                    <li>
-                        <a href="#" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                    </li>
+                        <li>
+                            <a href="#" className="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" className="block py-2 px-3 text-white rounded md:p-0">About</a>
+                        </li>
+                        <li>
+                            <a href="#" className="block py-2 px-3 text-white rounded md:p-0">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" className="block py-2 px-3 text-white rounded md:p-0">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        {/* Header */}
+
         {/* banner */}
-        {/* <div className="banner-container bg-cover bg-center min-h-screen bg-no-repeat">
-            <div style="background-image: url('img/Untitled229.png');" className="w-full h-[100vh] bg-cover bg-center">
-                <div className="container mx-auto px-4 h-full flex items-center justify-end">
-                    <div className="text-right">
-                        <h1 className="text-white text-3xl mb-2">Um novo Conceito de Babearia</h1>
-                        <p className="text-white mb-2">A experiência que você merece</p>
-                        <p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit error 
-                            <br/> iusto voluptatem deserunt commodi sint exercitationem sunt maxime,<br/> sit ut atque tempora, neque, voluptas distinctio nobis culpa eius. Autem,<br/> 
-                            numquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/>Modi fugit sit suscipit dignissimos. Adipisci natus, tempora doloremque <br/> facilis provident assumenda magnam? Harum eaque
-                        </p>
-                        <div className="mt-7">
-                            <form>
-                                <button className="inline-flex font-medium px-5 py-1 rounded border border-inherit">
-                                    CONHECER
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
+        <div className="relative banner-container bg-cover bg-center min-h-screen bg-no-repeat relative overflow-hidden">
+            <img src={Banner} alt="Main_Banner" className="object-cover object-center w-full h-screen" />
+        </div>
         {/* banner */}
                                             {/* SERVICES */}
         <section className="cards-services">
@@ -174,12 +118,10 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
-
-            <div>
-
-            </div>
-        </section>          
-                                    {/* Começo de outra sessão */}
+        </section>
+        {/* SERVICES */}
+        
+        {/* Começo de outra sessão */}
         <section className="our-time">
             <div className="conainer bg-white mb-80 w-full h-[30vh] p-4">
                 <div>
@@ -217,7 +159,7 @@ function LandingPage() {
         {/* Portifolio*/}
         <div className="flex justify-center items-center min-h-screen">
             <div className="grid grid-cols-3 gap-6">
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
+                <div className="w-[280px]"><img className="rounded-md" src="/barber-shop/src/assets/image/portifólio1.jpg" /></div>
                 <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
                 <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
                 <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
