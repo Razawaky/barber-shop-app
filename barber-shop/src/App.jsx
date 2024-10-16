@@ -3,9 +3,10 @@ import LandingPage from './components/LandingPage';
 
 function App() {
   return (
-    <div className="app">
+    <main className="flex-grow">
       <LandingPage />
-    </div>
+      {/* Outras seções */}
+    </main>
   )
 }
 

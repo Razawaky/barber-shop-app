@@ -1,11 +1,13 @@
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
+import Barber from "../assets/image/sobre.png";
+import Exemplo from "../assets/image/portifólio1.jpg";
 
 function LandingPage() {
     return (
     <>
         {/* NavBar */}
-        <nav className="navbar bg-black fixed navbar-expand-lg w-full z-20 top-0 start-0 px-2 py-2">
+        <nav className="navbar bg-black fixed navbar-expand-lg w-full z-20 top-0 start-0 px-2 py-2 rounded-b-md">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse text-white">
                     <div className="text-xl">
@@ -35,11 +37,11 @@ function LandingPage() {
                 </div>
             </div>
         </nav>
-        {/* Header */}
+        {/* NavBar */}
 
         {/* banner */}
         <div className="relative banner-container bg-cover bg-center min-h-screen bg-no-repeat relative overflow-hidden">
-            <img src={Banner} alt="Main_Banner" className="object-cover object-center w-full h-screen" />
+            <img src={Banner} alt="Main_Banner" className="object-cover object-center w-full h-screen rounded-b-lg bg-fixed" />
         </div>
         {/* banner */}
                                             {/* SERVICES */}
@@ -121,52 +123,63 @@ function LandingPage() {
         </section>
         {/* SERVICES */}
         
-        {/* Começo de outra sessão */}
+        {/* Time */}
         <section className="our-time">
-            <div className="conainer bg-white mb-80 w-full h-[30vh] p-4">
-                <div>
-                    <h2>Acompanhe nossa equipe</h2>
+            <div className="conainer bg-white w-full mb-80 mx-auto px-8 py-2 h-[30vh] flex justify-between items-center">
+                <div className="w-1/2">
+                    <h2 className="text-xl text-black">Acompanhe nossa equipe</h2>
                     <button className="mt-6 mb-2 bg-black text-white rounded-full w-48 h-10 self-start p-0">
-                        Comprar
+                        Planos
+                    </button>
+                </div>
+
+                <div className="w-1/2">
+                    <h2 className="text-xl text-black">Acompanhe nossa equipe</h2>
+                    <button className="mt-6 mb-2 bg-black text-white rounded-full w-48 h-10 self-start p-0">
+                        Planos
                     </button>
                 </div>
             </div>
         </section>
+        {/* Time */}
 
         {/* About */}
-        <div className="container-sobre">
-            <div className="imagem-sobre">
-                <img src="/src/img/sobre.png" alt="Barber Shop" />
-            </div>
-            <div className="texto1-sobre">
-                <h1>UM NOVO CONCEITO DE CUIDADO E ESTILO PESSOAL</h1>
-                <p>
-                    Nulla egestas sapien integer mi fermentum tellus tristique consequat. Pulvinar sagittis adipiscing sapien
-                    purus at mi tempus semper id vel. Pretium magna in egestas sit egestas justo.
-                </p>
-                <div className="texto2-sobre">
-                    <div>
-                        <h2>1000+</h2>
-                        <p>CLIENTES SATISFEITOS</p>
+                    <div className="container-sobre">
+                        <div className="imagem-sobre">
+                            <img src={Barber} alt="Barber Shop" />
+                        </div>
+                        <div className="texto1-sobre">
+                            <h1>UM NOVO CONCEITO DE CUIDADO E ESTILO PESSOAL</h1>
+                            <p>
+                                Nulla egestas sapien integer mi fermentum tellus tristique consequat. Pulvinar sagittis adipiscing sapien
+                                purus at mi tempus semper id vel. Pretium magna in egestas sit egestas justo.
+                            </p>
+                            <div className="texto2-sobre">
+                                <div>
+                                    <h2>1000+</h2>
+                                    <p>CLIENTES SATISFEITOS</p>
+                                </div>
+                                <div>
+                                    <h2>X</h2>
+                                    <p>ANOS DE EXPERIÊNCIA</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2>X</h2>
-                        <p>ANOS DE EXPERIÊNCIA</p>
-                    </div>
-                </div>
+        {/* About */}
+
+        {/* Portifolio*/}
+        <div className="flex justify-center items-center min-h-screen mt-40 mb-40">
+            <div className="grid grid-cols-3 gap-6">
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
+                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
             </div>
         </div>
         {/* Portifolio*/}
-        <div className="flex justify-center items-center min-h-screen">
-            <div className="grid grid-cols-3 gap-6">
-                <div className="w-[280px]"><img className="rounded-md" src="/barber-shop/src/assets/image/portifólio1.jpg" /></div>
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
-                <div className="w-[280px]"><img className="rounded-md" src="img/imagem-exemplo.png" /></div>
-            </div>
-        </div>
                                     {/* Rodapé */}
         <footer className="!bg-white !text-black min-h-[250px] space-y-4">  {/* RODAPÉ */}
             <div className="container mx-auto px-4 py-8">
@@ -187,7 +200,7 @@ function LandingPage() {
                             id='messageInput'
                             type="text" 
                             placeholder="Digite sua mensagem..." 
-                            className="w-full px-4 py-2 rounded-md border border-black focus:outline-none focus:ring-2 focus:ring-slate-900">
+                            className="w-full px-4 py-2 rounded-md border border-black focus:outline-none focus:ring-2 focus:ring-slate-900 text-white">
                         </input>
                     </div>
                 </div>
@@ -233,7 +246,6 @@ function LandingPage() {
                 </div>
             </div>
         </footer>
-
     </>                               
     );
 }
