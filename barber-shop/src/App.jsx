@@ -1,5 +1,9 @@
 import './App.css'
-import LandingPage from './components/LandingPage';
+import LandingPage from './routes/components/LandingPage';
+
+// Reaproveitando estrutura router dom
+// import { Outlet } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -7,7 +11,8 @@ function App() {
       <LandingPage />
       {/* Outras seções */}
     </main>
-  )
+  );
 }
+
 
 export default App

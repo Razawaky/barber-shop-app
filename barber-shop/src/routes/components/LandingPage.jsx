@@ -1,7 +1,7 @@
 import './LandingPage.css';
-import Banner from "../assets/image/Untitled229.png";
-import Barber from "../assets/image/sobre.png";
-import Exemplo from "../assets/image/portifólio1.jpg";
+import Banner from "/src/assets/image/Untitled229.";
+import Barber from "/src/assets/image/sobre.png";
+import Exemplo from "/src/assets/image/portifólio1.jpg";
 
 function LandingPage() {
     return (
