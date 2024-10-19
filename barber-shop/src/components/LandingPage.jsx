@@ -1,7 +1,10 @@
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
 import Barber from "../assets/image/sobre.png";
-import Exemplo from "../assets/image/portifólio1.jpg";
+import LoginPage from './LoginPage';
+import HeaderBanner from './LandingPageComponents/HeaderBanner'; 
+import Time from './LandingPageComponents/Time';
+import Portifolio from './LandingPageComponents/Portifolio';
 
 function LandingPage() {
     return (
@@ -43,6 +46,10 @@ function LandingPage() {
         <div className="relative banner-container bg-cover bg-center min-h-screen bg-no-repeat relative overflow-hidden">
             <img src={Banner} alt="Main_Banner" className="object-cover object-center w-full h-screen rounded-b-lg bg-fixed" />
         </div>
+
+        <HeaderBanner title={'Meu titulo'} 
+        description='Lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+        Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem loremLorem lorem lorem lorem' />
         {/* banner */}
                                             {/* SERVICES */}
         <section className="cards-services">
@@ -124,23 +131,7 @@ function LandingPage() {
         {/* SERVICES */}
         
         {/* Time */}
-        <section className="our-time">
-            <div className="conainer bg-white w-full mb-80 mx-auto px-8 py-2 h-[30vh] flex justify-between items-center">
-                <div className="w-1/2">
-                    <h2 className="text-xl text-black">Acompanhe nossa equipe</h2>
-                    <button className="mt-6 mb-2 bg-black text-white rounded-full w-48 h-10 self-start p-0">
-                        Planos
-                    </button>
-                </div>
-
-                <div className="w-1/2">
-                    <h2 className="text-xl text-black">Acompanhe nossa equipe</h2>
-                    <button className="mt-6 mb-2 bg-black text-white rounded-full w-48 h-10 self-start p-0">
-                        Planos
-                    </button>
-                </div>
-            </div>
-        </section>
+        <Time />
         {/* Time */}
 
         {/* About */}
@@ -169,16 +160,7 @@ function LandingPage() {
         {/* About */}
 
         {/* Portifolio*/}
-        <div className="flex justify-center items-center min-h-screen mt-40 mb-40">
-            <div className="grid grid-cols-3 gap-6">
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-                <div className="w-[240px]"><img className="rounded-md" src={Exemplo} /></div>
-            </div>
-        </div>
+            <Portifolio />
         {/* Portifolio*/}
                                     {/* Rodapé */}
         <footer className="!bg-white !text-black min-h-[250px] space-y-4">  {/* RODAPÉ */}
@@ -246,6 +228,9 @@ function LandingPage() {
                 </div>
             </div>
         </footer>
+
+        {/* Login page review */}
+            <LoginPage />
     </>                               
     );
 }
