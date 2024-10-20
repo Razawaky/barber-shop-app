@@ -97,13 +97,7 @@ function LandingPage() {
         {/* footer */}
 
         {/* Login page review */}
-        <div className="bg-black min-h-screen flex items-center justify-center mt-30">
-            <div className="bg-black p-8 rounded-lg shadow-md max-w-sm w-full border">
-                <h1 className="text-2xl font-bold mb-4">Welcome to Our Barber Shop</h1>
-                <p className="text-xl mb-6">Book your appointment today!</p>
-                    <Calendar />
-            </div>
-        </div>
+        <Calendar />
         {/* <LoginPage /> */}
     </>                               
     );

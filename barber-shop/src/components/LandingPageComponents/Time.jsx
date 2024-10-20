@@ -4,7 +4,7 @@ import Img from '../../assets/image/portifolio2.jpeg';
 
 export default function Time() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [totalPages] = useState(3); // Número de páginas total
+  const [totalPages] = useState(4); // Número de páginas total
 
   const handleNextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
