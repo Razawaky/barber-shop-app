@@ -11,40 +11,44 @@ export default function Time() {
   };
 
   return (
-    <section className="our-time">
-        <div className="container bg-white max-w-full mb-80 mx-auto px-8 py-2 h-[30vh] flex justify-between items-center">
-            <div className="w-[50%]">
-            <h2 className="text-xl text-black">Acompanhe nossa equipe</h2>
-            <button 
-                onClick={handleNextImage} 
-                className="mt-6 mb-2 bg-black text-white rounded-[10px] w-48 h-8 self-start flex justify-center p-1">
-                Planos
-            </button>
+    <section className="our-time sm:w-full">
+        <div className="container bg-white max-w-full mb-80 mx-auto px-12 py-2 h-[34vh] flex justify-between items-center">
+            <div className="w-full">  {/* Info Container */}
+                <h2 className="text-4xl text-black">Acompanhe nossa equipe</h2>
+                <button 
+                    onClick={handleNextImage} 
+                    className="mt-6 mb-2 bg-black text-white text-xl rounded-[10px] w-48 flex justify-center py-[2px]">
+                    Planos
+                </button>
             </div>
 
-            <div className="md:w-[45%] flex justify-around items-center md:space-x-4">
-            <div className="aspect-square rounded-full overflow-hidden w-[18vh]">
-                <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
-            </div> 
-            <div className="aspect-square rounded-full overflow-hidden w-[24vh]">
-                <img src={Modelo} alt="" className="object-cover object-center w-full h-full rounded-full" />
-            </div>  
-            <div className="aspect-square rounded-full overflow-hidden w-[18vh]">
-                <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
-            </div>    
-            </div>
+            <div className="container md:w-[50%] p-6">
 
-            {/* Indicadores de slide */}
-            <div className="flex justify-center space-x-2 mt-4">
-                {[...Array(totalPages)].map((_, index) => (
-                    <span 
-                    key={index} 
-                    className={`w-4 h-4 bg-gray-800 rounded-full cursor-pointer ${
-                    currentIndex === index ? 'bg-white' : ''}`}></span>
-                ))}
-            </div>
+                {/* Fotos container */}
+                <div className="flex justify-center items-center md:space-x-6">
+                    <div className="aspect-square rounded-full overflow-hidden w-[18vh] border-2 border-black">
+                        <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
+                    </div> 
+                    <div className="aspect-square rounded-full overflow-hidden w-[24vh] border-2 border-black">
+                        <img src={Modelo} alt="" className="object-cover object-center w-full h-full rounded-full" />
+                    </div>  
+                    <div className="aspect-square rounded-full overflow-hidden w-[18vh] border-2 border-black">
+                        <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
+                    </div>    
+                </div>
 
-            <div className="bg-black rounded w-[50px]"></div>
+                {/* Indicadores de slide */}
+                <div className="flex justify-center space-x-2 mt-5">
+                    {[...Array(totalPages)].map((_, index) => (
+                        <span 
+                        key={index} 
+                        className={`w-4 h-4 bg-gray-800 rounded-full cursor-pointer ${
+                        currentIndex === index ? 'bg-white' : ''}`}></span>
+                    ))}
+                </div>
+
+                <div className="bg-black rounded w-[50px]"></div>
+            </div>
             
         </div>
     </section>
