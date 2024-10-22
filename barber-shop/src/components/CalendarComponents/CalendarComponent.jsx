@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function Calendar() {
 useEffect(() => {
-  console.log("Componente");
+  console.log("Fazer o componente usando useEffect");
 }, []);
 
 return (

@@ -1,9 +1,9 @@
-// import LoginPage from './LoginPage';
+import LoginPage from './LoginPage';
 import Calendar from './CalendarComponents/CalendarComponent';
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
 import Barber from "../assets/image/sobre.png";
-import HeaderBanner from './LandingPageComponents/HeaderBanner'; 
+import HeaderBanner from './LandingPageComponents/HeaderBanner';
 import Services from './LandingPageComponents/Services';
 import Time from './LandingPageComponents/Time';
 import Portifolio from './LandingPageComponents/Portifolio';
@@ -97,6 +97,7 @@ function LandingPage() {
         {/* footer */}
 
         {/* Login page review */}
+        <LoginPage />
         <Calendar />
         {/* <LoginPage /> */}
     </>                               
