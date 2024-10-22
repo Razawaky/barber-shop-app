@@ -11,15 +11,15 @@ return (
       <div className="w-auto shadow-lg">
         <div className="md:p-16 md:pb-12 p-5 dark:bg-gray-800 bg-white rounded-t">
           <div className="px-4 flex items-center justify-around">
-            <div className="flex items-center text-gray-800 dark:text-gray-100 bg-gray-600 rounded-full p-3 cursor-pointer"> 
-              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <div className="flex items-center text-white p-2 cursor-pointer font-bold"> 
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={34} height={34} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="15 6 9 12 15 18" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold text-white bg-gray-900 rounded p-2">Outubro</h1>
-            <div className="flex items-center text-gray-800 dark:text-gray-100 bg-gray-600 rounded-full p-3 cursor-pointer"> 
-              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler ml-3 icon-tabler-chevron-right" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <h1 className="text-2xl font-bold text-white">Outubro</h1>
+            <div className="flex justify-center text-white cursor-pointer p-2"> 
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right" width={34} height={34} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="9 6 15 12 9 18" />
               </svg>
