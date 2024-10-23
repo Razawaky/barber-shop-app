@@ -9,7 +9,7 @@ return (
   <>
     <div className="flex items-center justify-center py-8 px-4">
       <div className="w-auto shadow-lg">
-        <div className="md:p-16 md:pb-12 p-5 dark:bg-gray-800 bg-white rounded-t">
+        <div className="md:p-16 md:pb-12 p-5 dark:bg-[#181a25] rounded-t">
           <div className="px-4 flex items-center justify-around">
             <div className="flex items-center text-white p-2 cursor-pointer font-bold"> 
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={34} height={34} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -298,7 +298,7 @@ return (
           </div>
         </div>
 
-          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b"> {/* Horários*/}
+          <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-[#10121c] rounded-b"> {/* Horários*/}
             <div className="px-6 flex gap-6 flex justify-center">
               <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>

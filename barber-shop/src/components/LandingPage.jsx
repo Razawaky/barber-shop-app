@@ -2,12 +2,13 @@ import LoginPage from './LoginPage';
 import Calendar from './CalendarComponents/CalendarComponent';
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
-import Barber from "../assets/image/sobre.png";
+// import Barber from "../assets/image/sobre.png";
 import HeaderBanner from './LandingPageComponents/HeaderBanner';
 import Services from './LandingPageComponents/Services';
 import Time from './LandingPageComponents/Time';
 import Portifolio from './LandingPageComponents/Portifolio';
 import Footer from './LandingPageComponents/Footer';
+import AboutComponent from './LandingPageComponents/About'
 
 function LandingPage() {
     return (
@@ -60,32 +61,11 @@ function LandingPage() {
         {/* SERVICES */}
         
         {/* Time */}
-        <Time />
+            <Time />
         {/* Time */}
 
         {/* About */}
-                    <div className="container-sobre">
-                        <div className="imagem-sobre">
-                            <img src={Barber} alt="Barber Shop" />
-                        </div>
-                        <div className="texto1-sobre">
-                            <h1>UM NOVO CONCEITO DE CUIDADO E ESTILO PESSOAL</h1>
-                            <p>
-                                Nulla egestas sapien integer mi fermentum tellus tristique consequat. Pulvinar sagittis adipiscing sapien
-                                purus at mi tempus semper id vel. Pretium magna in egestas sit egestas justo.
-                            </p>
-                            <div className="texto2-sobre">
-                                <div>
-                                    <h2>1000+</h2>
-                                    <p>CLIENTES SATISFEITOS</p>
-                                </div>
-                                <div>
-                                    <h2>X</h2>
-                                    <p>ANOS DE EXPERIÊNCIA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <AboutComponent />
         {/* About */}
 
         {/* Portifolio*/}
@@ -97,8 +77,8 @@ function LandingPage() {
         {/* footer */}
 
         {/* Login page review */}
-        <LoginPage />
-        <Calendar />
+            <LoginPage />
+            <Calendar />
         {/* <LoginPage /> */}
     </>                               
     );
