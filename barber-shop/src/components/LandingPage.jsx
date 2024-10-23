@@ -1,5 +1,3 @@
-import LoginPage from './LoginPage';
-import Calendar from './CalendarComponents/CalendarComponent';
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
 // import Barber from "../assets/image/sobre.png";
@@ -75,11 +73,6 @@ function LandingPage() {
         {/* Rodapé */}
             <Footer />
         {/* footer */}
-
-        {/* Login page review */}
-            <LoginPage />
-            <Calendar />
-        {/* <LoginPage /> */}
     </>                               
     );
 }

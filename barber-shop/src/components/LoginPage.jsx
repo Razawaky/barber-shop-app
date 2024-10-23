@@ -9,11 +9,11 @@ const LoginPage = () => {
           <img src={LoginImage} alt="Background" className="object-cover w-full h-full rounded-lg" />
         </div>
 
-        <div className="bg-gray-800 rounded-lg p-10 w-[60vh]">  {/* Formulário */}
+        <div className="bg-[#181a25] rounded-lg p-10 w-[60vh]">  {/* Formulário */}
           
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white">Login</h2>
 
-          <form className="mt-8 flex flex-col space-y-10" action="#" method="POST">
+          <form className="mt-8 flex flex-col space-y-10" action="./" method="POST">
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <h2>Usuario</h2>
@@ -24,8 +24,7 @@ const LoginPage = () => {
                   type="text"
                   required
                   className="mb-3 appearance-none rounded-none relative block w-full px-4 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Username"
-                />
+                  placeholder="Username"/>
               </div>
               <div>
                 <h2>Senha</h2>
