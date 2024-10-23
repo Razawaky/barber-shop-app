@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Modelo from '../../assets/image/modelo.jpg';
-import Img from '../../assets/image/portifolio2.jpeg';
 
 export default function Time() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,13 +26,13 @@ export default function Time() {
                 {/* Fotos container */}
                 <div className="flex justify-center items-center md:space-x-6">
                     <div className="aspect-square rounded-full overflow-hidden w-[18vh] border-2 border-black">
-                        <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
+                        <img src={Modelo} alt="" className="object-cover object-center w-full h-full rounded-full" />
                     </div> 
                     <div className="aspect-square rounded-full overflow-hidden w-[24vh] border-2 border-black">
                         <img src={Modelo} alt="" className="object-cover object-center w-full h-full rounded-full" />
                     </div>  
                     <div className="aspect-square rounded-full overflow-hidden w-[18vh] border-2 border-black">
-                        <img src={Img} alt="" className="object-cover object-center w-full h-full rounded-full" />
+                        <img src={Modelo} alt="" className="object-cover object-center w-full h-full rounded-full" />
                     </div>    
                 </div>
 
