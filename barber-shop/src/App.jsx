@@ -1,7 +1,7 @@
 import './App.css'
-import LandingPage from './components/LandingPage';
-import LoginPage from './components/LoginPage'
-import Calendar from './components/CalendarComponents/CalendarComponent'
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage'
+import Calendar from './pages/CalendarComponent'
 import Card from "./components/LandingPageComponents/WorkmanCard"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 

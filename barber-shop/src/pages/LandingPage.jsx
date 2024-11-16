@@ -1,12 +1,12 @@
 import './LandingPage.css';
 import Banner from "../assets/image/Untitled229.png";
 // import Barber from "../assets/image/sobre.png";
-import HeaderBanner from './LandingPageComponents/HeaderBanner';
-import Services from './LandingPageComponents/Services';
-import Time from './LandingPageComponents/Time';
-import Portifolio from './LandingPageComponents/Portifolio';
-import Footer from './LandingPageComponents/Footer';
-import AboutComponent from './LandingPageComponents/About'
+import HeaderBanner from '../components/LandingPageComponents/HeaderBanner';
+import Services from '../components/LandingPageComponents/Services';
+import Time from '../components/LandingPageComponents/Time';
+import Portifolio from '../components/LandingPageComponents/Portifolio';
+import Footer from '../components/LandingPageComponents/Footer';
+import AboutComponent from '../components/LandingPageComponents/About'
 
 function LandingPage() {
     return (
