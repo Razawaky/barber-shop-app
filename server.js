@@ -1,7 +1,8 @@
 import express from 'express'; // Importando express
-import { PrismaClient } from '@prisma/client' //
+import { PrismaClient } from '@prisma/client' //Importando a API prisma
 
 const prisma = new PrismaClient()
+console.log('Prisma connected:', prisma.$connect()) //verifica se a conexão com o banco está sendo estabelecida
 
 const app = express();
 app.use(express.json());
@@ -11,15 +12,22 @@ E o endereço*/
 
 //criando usuario
 app.post('/users', async (req, res) => {
-    await prisma.user.create({
-        data: {
-            email: req.body.email,
-            name: req.body.name,
-            age: req.body.age,
-        }
-    })
+    try {
+        const newUser = await prisma.user.create({
+            data: {
+                email: req.body.email,
+                name: req.body.name,
+                age: req.body.age,
+            }
+        });
 
-    res.status(201).json(req.body);
+        console.log(req);
+        console.log('User created:', newUser);
+        res.status(201).json(newUser);
+    } catch (error) {
+        console.error('Error creating user:', error);
+        res.status(500).json({ message: 'Error creating user' });
+    }
 })
 
 //listando usuarios
@@ -31,6 +39,7 @@ app.get('/users', async (req, res) => {
         users = await prisma.user.findMany({
             where: {
                 name: req.query.name,
+                age: req.query.age,
             }
         })
     }else {    
