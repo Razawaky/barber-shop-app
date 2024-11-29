@@ -8,8 +8,9 @@ function FormTest() {
     Axios.post("http://localhost:3001/register", {
       email: values.email,
       password: values.password,
-    }).then((response) => {
+    }).then((response, result) => {
       console.log(response);
+      console.log(result);
     } );
   };
   const handleClickLogin = (values) => console.log(values);

@@ -3,37 +3,35 @@ const app = express();
 const mysql = require("mysql");
 const cors = require('cors');
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    date: "banco",
-});
-
 app.use(express.json());
 app.use(cors());
 
-app.post("/register", (req, res) => {
-    const email = req.body.email;
-    const password = req.body.password;
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'lol',
+});
 
-    db.query("SELECT * FROM users WHERE email = ?", [email], 
-    (err, result) => {
-        if(err) {
-            res.send(err)
-        }
+app.get('/', (req, res) => {
+    db.query('SELECT * FROM lol.empresa', (result) => {
         res.send(result);
     })
 })
 
-// app.get("/", (req, res) => {
-//     db.query("INSERT INTO users (email, password) VALUES ('santana@bol', '878') ", (err, result) => {
+// app.post("/register", (req, res) => {
+//     const email = req.body.email;
+//     const password = req.body.password;
+
+
+//     db.query("SELECT * FROM users WHERE email = ?", [email], 
+//     (err, result) => {
 //         if(err) {
-//             console.log(err);
+//             res.send(err)
 //         }
-//     }
-//     );
-// });
+//         res.send(result);
+//     })
+// })
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001");
