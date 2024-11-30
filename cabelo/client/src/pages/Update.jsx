@@ -21,7 +21,7 @@ const Update = () => {
     const handleClick = async e =>{
         e.preventDefault()
         try{
-            await axios.put("http://localhost:3004/reserva/"+ reservaId, reserva)
+            await axios.put("http://localhost:3306/reserva/"+ reservaId, reserva)
             navigate("/")
         }catch(err){
             console.log(err)

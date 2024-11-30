@@ -12,7 +12,12 @@ const db = mysql.createConnection({
 })
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: '*', // Permite qualquer origem. Troque por um domínio específico, se necessário.
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
+    credentials: true // Permite envio de cookies/autenticação, se necessário
+}))
 
 app.get("/", (req, res)=>{
     res.json("hellor, aq é o back")

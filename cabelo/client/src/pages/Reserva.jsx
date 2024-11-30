@@ -4,13 +4,13 @@ import { useState } from 'react'
 import axios from 'axios'
 import { Link } from "react-router-dom"
 
-const User = () => {
-    const [reserva, setReserva] = useState([])
+const Reserva = () => {
+    const [reservas, setReserva] = useState([])
 
     useEffect(() => {
         const fetchAllReserva = async ()=>{
             try{
-                const res = await axios.get("http://localhost:3004/reserva")
+                const res = await axios.get("http://localhost:3306/reserva")
                 setReserva(res.data)
             }catch(err){
                 console.log(err)
@@ -21,7 +21,7 @@ const User = () => {
 
     const handleDelete = async (id)=>{
         try {
-            await axios.delete("http://localhost:3004/reserva/"+id)
+            await axios.delete("http://localhost:3306/reserva/"+id)
             window.location.reload()
         } catch (err) {
             console.log(err)
@@ -32,7 +32,7 @@ const User = () => {
         <div>
             <h1>Cabeleireiro Dortas</h1>
             <div className="users">
-                {reserva.map(reserva=>(
+                {reservas.map(reserva=>(
                     <div className="user" key={reserva.ID}>
                         <h2>Reserva de {reserva.USERNAME}</h2>
                         <h3>Com o/a profissional {reserva.CABENAME}</h3>
@@ -49,4 +49,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Reserva
