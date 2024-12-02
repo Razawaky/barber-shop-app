@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28/11/2024 às 01:32
+-- Tempo de geração: 02/12/2024 às 04:30
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -37,12 +37,12 @@ CREATE TABLE `cabeleiro` (
 --
 
 INSERT INTO `cabeleiro` (`ID`, `NOME`) VALUES
-(1, 'Marcos Antônio'),
-(2, 'Antonieta Fentuccini'),
-(3, 'Márcia Floresta'),
-(4, 'Dante Seixas'),
-(5, 'Fábio Larte'),
-(6, 'Daniela Paula');
+(13, 'Dorte'),
+(14, 'Lucas'),
+(15, 'Pedro'),
+(16, 'Binicius'),
+(17, 'Youtube'),
+(19, 'Thomas');
 
 -- --------------------------------------------------------
 
@@ -52,9 +52,9 @@ INSERT INTO `cabeleiro` (`ID`, `NOME`) VALUES
 
 CREATE TABLE `reserva` (
   `ID` int(11) NOT NULL,
-  `ID_USER` int(11) NOT NULL,
+  `USER` varchar(255) NOT NULL,
   `ID_CABELEIRO` int(11) NOT NULL,
-  `DATA` date NOT NULL,
+  `DATA` varchar(10) NOT NULL,
   `HORA` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -62,10 +62,8 @@ CREATE TABLE `reserva` (
 -- Despejando dados para a tabela `reserva`
 --
 
-INSERT INTO `reserva` (`ID`, `ID_USER`, `ID_CABELEIRO`, `DATA`, `HORA`) VALUES
-(1, 1, 3, '2024-12-05', '15:30:00'),
-(2, 3, 5, '1111-11-11', '11:11:00'),
-(3, 1, 1, '2024-12-08', '08:30:00');
+INSERT INTO `reserva` (`ID`, `USER`, `ID_CABELEIRO`, `DATA`, `HORA`) VALUES
+(70, 'Durte', 13, '2024-12-03', '06:56:00');
 
 -- --------------------------------------------------------
 
@@ -106,7 +104,6 @@ ALTER TABLE `cabeleiro`
 --
 ALTER TABLE `reserva`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `USER` (`ID_USER`),
   ADD KEY `CABELEIRO` (`ID_CABELEIRO`);
 
 --
@@ -123,13 +120,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `cabeleiro`
 --
 ALTER TABLE `cabeleiro`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT de tabela `user`
@@ -145,8 +142,7 @@ ALTER TABLE `user`
 -- Restrições para tabelas `reserva`
 --
 ALTER TABLE `reserva`
-  ADD CONSTRAINT `CABELEIRO` FOREIGN KEY (`ID_CABELEIRO`) REFERENCES `cabeleiro` (`ID`),
-  ADD CONSTRAINT `USER` FOREIGN KEY (`ID_USER`) REFERENCES `user` (`ID`);
+  ADD CONSTRAINT `CABELEIRO` FOREIGN KEY (`ID_CABELEIRO`) REFERENCES `cabeleiro` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
