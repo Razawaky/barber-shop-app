@@ -25,37 +25,37 @@ export default function Footer() {
                 </div>
 
                 {/* Segunda seção */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-8 border-b border-black pb-8">
+                <div className="text-black grid grid-cols-1 md:grid-cols-4 gap-2 mb-8 border-b border-black pb-8">
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Seção 1</h3>
                     <ul>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 1</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 2</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 3</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 1</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 2</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 3</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Seção 2</h3>
                     <ul>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 1</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 2</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 3</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 1</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 2</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 3</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Seção 3</h3>
                     <ul>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 1</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 2</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 3</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 1</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 2</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 3</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 className="text-xl font-semibold mb-4">Seção 4</h3>
                     <ul>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 1</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 2</a></li>
-                        <li><a href="#" className="block py-2 hover:text-blue-600">Link 3</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 1</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 2</a></li>
+                        <li><a href="#" className="block text-black py-2 hover:text-blue-600">Link 3</a></li>
                     </ul>
                 </div>
                 </div> 
