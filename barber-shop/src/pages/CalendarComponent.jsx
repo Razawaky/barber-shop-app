@@ -1,9 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Calendar() {
-useEffect(() => {
-  console.log("Fazer o componente usando useEffect");
-}, []);
+
+  // Estado para o mês atual
+  const [currentMonthIndex, setCurrentMonthIndex] = useState(9); // Outubro (índice 9)
+
+  // Lista com os nomes dos meses
+  const months = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+
+  // Função para avançar para o próximo mês
+  const nextMonth = () => {
+    setCurrentMonthIndex((prevIndex) => (prevIndex + 1) % 12);
+  };
+
+  // Função para retroceder para o mês anterior
+  const prevMonth = () => {
+    setCurrentMonthIndex((prevIndex) => (prevIndex - 1 + 12) % 12);
+  };
+
+  
+
+  useEffect(() => {
+    
+  }, []);
 
 return (
   <>
@@ -11,14 +43,19 @@ return (
       <div className="w-auto shadow-lg">
         <div className="md:p-16 md:pb-12 p-5 dark:bg-[#181a25] rounded-t">
           <div className="px-4 flex items-center justify-around">
-            <div className="flex items-center text-white p-2 cursor-pointer font-bold"> 
+            {/* Botão para o mês anterior */}
+            <div className="flex items-center text-white p-2 cursor-pointer font-bold"
+              onClick={prevMonth}> 
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-left" width={34} height={34} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="15 6 9 12 15 18" />
               </svg>
             </div>
-            <h1 className="text-2xl font-bold text-white">Outubro</h1>
-            <div className="flex justify-center text-white cursor-pointer p-2"> 
+            {/* Nome do mês */}
+            <h1 className="text-2xl font-bold text-white">{months[currentMonthIndex]}</h1>
+
+            {/* Botão para o próximo mês */}
+            <div className="flex justify-center text-white cursor-pointer p-2" onClick={nextMonth}> 
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right" width={34} height={34} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <polyline points="9 6 15 12 9 18" />
@@ -95,25 +132,25 @@ return (
 
                   <td className="pt-6">
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl text-white font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">1</p>
+                      <p className=" cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl text-white font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">1</p>
                   </div>
 
                   </td>
                     <td className="pt-6">
                       <div className="px-4 py-4 flex w-full justify-center">
-                        <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">2</p>
+                        <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">2</p>
                       </div>
                   </td>
 
                   <td className="pt-6">
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">3</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">3</p>
                     </div>
                   </td>
 
                   <td className="pt-6">
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">4</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">4</p>
                     </div>
                   </td>
                 </tr>
@@ -121,87 +158,43 @@ return (
                 <tr>
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">5</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">5</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">6</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">6</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">7</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">7</p>
                     </div>
                   </td>
 
                   <td>
                       <div className="px-4 py-4 flex w-full justify-center">
-                        <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">8</p>
+                        <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">8</p>
                       </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">9</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">9</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">10</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">10</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">11</p>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">12</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">13</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">14</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">15</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">16</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">17</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">18</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">11</p>
                     </div>
                   </td>
                 </tr>
@@ -209,43 +202,43 @@ return (
                 <tr>
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">19</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">12</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">20</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">13</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">21</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">14</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">22</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">15</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">23</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">16</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">24</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">17</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">25</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">18</p>
                     </div>
                   </td>
                 </tr>
@@ -253,37 +246,81 @@ return (
                 <tr>
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">26</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">19</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">27</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">20</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">28</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">21</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">29</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">22</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">30</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">23</p>
                     </div>
                   </td>
 
                   <td>
                     <div className="px-4 py-4 flex w-full justify-center">
-                      <p className="cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">31</p>
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">24</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">25</p>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">26</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">27</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">28</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">29</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">30</p>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div className="px-4 py-4 flex w-full justify-center">
+                      <p className="cursor-pointer transition ease-in-out hover:bg-blue-900 cursor-pointer text-2xl font-medium bg-gray-600 w-full flex justify-center rounded-[0.5vh] px-7 py-4">31</p>
                     </div>
                   </td>
 
@@ -300,29 +337,29 @@ return (
 
           <div className="md:py-8 py-5 md:px-16 px-5 dark:bg-[#10121c] rounded-b"> {/* Horários*/}
             <div className="px-6 flex gap-6 flex justify-center">
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   8:00
                 </p>
               </div> 
 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   9:00
                 </p>
               </div> 
 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   10:00
                 </p>
               </div> 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                 11:00
                 </p>
               </div> 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   12:00
                 </p>
@@ -330,29 +367,29 @@ return (
             </div>
 
             <div className="px-6 flex gap-6 mt-4 flex justify-center">
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   13:40
                 </p>
               </div> 
 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   14:40
                 </p>
               </div> 
 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   15:40
                 </p>
               </div> 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   17:00
                 </p>
               </div> 
-              <div className="bg-black rounded-lg w-[12vh] py-1 flex justify-center">
+              <div className="cursor-pointer transition hover:scale-125 bg-black rounded-lg w-[12vh] py-1 flex justify-center">
                 <p>
                   18:00
                 </p>

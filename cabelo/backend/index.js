@@ -20,7 +20,7 @@ app.use(cors({
 }))
 
 app.get("/", (req, res)=>{
-    res.json("hellor, aq é o back")
+    res.json("hello, aq é o back")
 })
 
 //CREATE
