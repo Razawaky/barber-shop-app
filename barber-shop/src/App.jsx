@@ -17,7 +17,7 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/Register' element={<RegisterPage />} />
           <Route path='/calendario' element={<Calendar />} />
-          <Route path='/card=1' element={<Card />} />
+          <Route path='/card' element={<Card />} />
           <Route path='/test' element={<Test />} />
         </Routes>
       </BrowserRouter>
